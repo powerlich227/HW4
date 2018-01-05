@@ -1,0 +1,6 @@
+from ctypes import *
+lib = CDLL('./libTest.so')
+gettheta = lib.gettheta
+gettheta.restype = c_double
+a = gettheta()
+print a

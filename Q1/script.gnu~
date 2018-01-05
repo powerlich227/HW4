@@ -1,0 +1,16 @@
+set terminal postscript eps
+set xlabel "Degree"
+set ylabel "Accumulation"
+set output "hmwk4_problem1.eps"
+set title "hmwk4_problem1"
+
+set multiplot layout 2,1
+set style data histogram
+set style histogram clustered gap 1
+set style fill solid 0.4 border
+
+plot 'hmwk4_problem1a.dat' u 2:xticlabels(1) title "0",'' u 3:xticlabels(1) title "30",'' u 4:xticlabels(1) title "60"
+plot 'hmwk4_problem1b.dat' u 2:xticlabels(1) title "45/180"
+
+unset multiplot
+
